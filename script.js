@@ -22,6 +22,7 @@ function writePassword() {
 
 }
 
+//Prompt for length, check for bad input, and save value
 function getLength(){
   length = prompt("How many characters(8-128?)");
   if(isNaN(length) || (parseInt(length) < 8 || (parseInt(length) > 128))){
@@ -33,6 +34,7 @@ function getLength(){
   }
 }
 
+//Prompt for uppercase preference, check for bad input, and save value
 function getUpper(){
   useUpper = String(prompt("Would you like to use uppercase characters?(y/n")).toLowerCase();
   if(useUpper!== "y" && useUpper !== "n"){
@@ -45,6 +47,7 @@ function getUpper(){
   }
 }
 
+//Prompt for lowercase preference, check for bad input, and save value
 function getLower(){
   useLower = String(prompt("Would you like to use lowercase characters?(y/n")).toLowerCase();
   if(useLower!== "y" && useLower !== "n"){
@@ -56,6 +59,7 @@ function getLower(){
   }
 }
 
+//Prompt for special character preference, check for bad input, and save value
 function getSpecial(){
   useSpecial = String(prompt("Would you like to use special characters?(y/n")).toLowerCase();
   if(useSpecial!== "y" && useSpecial !== "n"){
@@ -67,6 +71,7 @@ function getSpecial(){
   }
 }
 
+//Prompt for number preference, check for bad input, and save value
 function getNumber(){
   useNumber = String(prompt("Would you like to use numbers?(y/n")).toLowerCase();
   if(useNumber!== "y" && useNumber !== "n"){
@@ -78,6 +83,7 @@ function getNumber(){
   }
 }
 
+//Take new array taken from all preferences and iterate through it and create a password and return it
 function generatePassword(myLength){
   var temp= "";
   for(i = 0; i < myLength; i++){
